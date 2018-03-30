@@ -1,0 +1,30 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:1.5.10.RELEASE"
+    }
+}
+
+apply plugin: "groovy"
+apply plugin: "org.springframework.boot"
+
+ext {
+    groovy = "2.4.12"
+    springBoot = "1.5.10.RELEASE"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.codehaus.groovy:groovy-all:$groovy"
+    compile "org.springframework.boot:spring-boot-starter-web:$springBoot"
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
+
